@@ -28,7 +28,15 @@
 .user-component__column:last-child{
 color:rgba(0,0,0,0.5);
 }
-
+@keyframes hideSplashScreen{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+        visibility:hidden;
+    }
+}
 #splash-screen{
     background-color:var(--yellow);
     position:absolute;
@@ -39,4 +47,6 @@ color:rgba(0,0,0,0.5);
     align-items:center;
     justify-content:center;
     font-size:120px;
+    animation: hideSplashScreen 0.3s ease-in-out forwards;
+    animation-delay:3s;
 }
